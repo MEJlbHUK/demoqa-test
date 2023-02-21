@@ -30,7 +30,7 @@ public class TestPracticeForm {
 
         $(byText("Other")).click();
 
-        $("#userNumber").setValue("89990001122");
+        $("#userNumber").setValue("8999000112");
 
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOptionByValue("1965");
@@ -52,7 +52,11 @@ public class TestPracticeForm {
 
         $("#submit").click();
 
-        sleep(1000);
+        $(".modal-header").shouldHave(text("Thanks for submitting the form"));
+
+        $(".table-responsive").shouldHave(text("Student Name Vasya Pupkin"), text("Student Email test@test.nur"), text("Gender Other"),
+                text("Mobile 8999000112"), text("Date of Birth 07 December,1965"), text("Subjects Biology"), text("Hobbies Music"),
+                text("Picture image.jpeg"), text("Address Paris"), text("State and City NCR Delhi"));
     }
 }
 
