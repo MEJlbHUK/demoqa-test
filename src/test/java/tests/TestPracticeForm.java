@@ -42,7 +42,7 @@ public class TestPracticeForm {
 
         $(byText("Music")).click();
 
-        $("#uploadPicture").uploadFile(new File("src/resourse/image/image.jpeg"));
+        $("#uploadPicture").uploadFromClasspath("img/img.png");
 
         $("#currentAddress").setValue("Paris");
 
@@ -59,4 +59,3 @@ public class TestPracticeForm {
                 text("Picture image.jpeg"), text("Address Paris"), text("State and City NCR Delhi"));
     }
 }
-
