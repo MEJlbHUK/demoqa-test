@@ -42,7 +42,7 @@ public class TestPracticeForm {
 
         $(byText("Music")).click();
 
-        $("#uploadPicture").uploadFromClasspath("img/img.png");
+        $("#uploadPicture").uploadFile(new File("src/resourse/img/img.png"));
 
         $("#currentAddress").setValue("Paris");
 
@@ -56,6 +56,6 @@ public class TestPracticeForm {
 
         $(".table-responsive").shouldHave(text("Student Name Vasya Pupkin"), text("Student Email test@test.nur"), text("Gender Other"),
                 text("Mobile 8999000112"), text("Date of Birth 07 December,1965"), text("Subjects Biology"), text("Hobbies Music"),
-                text("Picture image.jpeg"), text("Address Paris"), text("State and City NCR Delhi"));
+                text("Picture img.png"), text("Address Paris"), text("State and City NCR Delhi"));
     }
 }
